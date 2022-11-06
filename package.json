@@ -15,7 +15,9 @@
     "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
     "expo": "~46.0.16",
+    "expo-splash-screen": "~0.16.2",
     "expo-status-bar": "~1.4.0",
+    "expo-updates": "~0.14.6",
     "nativewind": "^2.0.11",
     "react": "18.0.0",
     "react-currency-formatter": "^1.1.0",
@@ -30,8 +32,7 @@
     "react-native-svg": "12.3.0",
     "react-native-web": "~0.18.7",
     "react-redux": "^8.0.4",
-    "tailwindcss": "^3.2.1",
-    "expo-splash-screen": "~0.16.2"
+    "tailwindcss": "^3.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
