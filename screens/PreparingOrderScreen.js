@@ -19,7 +19,7 @@ const PreparingOrderScreen = () => {
                 source={require('../assets/overLoading.gif')}
                 animation="slideInUp"
                 iterationCount={1}
-                className="h-80 w-80"
+                className="h-52 w-5h-52"
             />
 
             <Animatable.Text
