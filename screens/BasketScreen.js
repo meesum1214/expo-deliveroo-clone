@@ -7,6 +7,7 @@ import { removeFromBasket, selectBasketItems, selectBasketTotal } from '../featu
 import { XCircleIcon } from 'react-native-heroicons/outline'
 import { urlFor } from '../sanity'
 import Currency from 'react-currency-formatter'
+import { addToOrder } from '../features/orderSlice'
 
 const BasketScreen = () => {
   const navigation = useNavigation()
@@ -15,6 +16,10 @@ const BasketScreen = () => {
   const basketTotal = useSelector(selectBasketTotal)
   const [groupedItemsInBasket, setGroupedItemsInBasket] = useState([])
   const dispatch = useDispatch()
+
+  const addOrder = () => {
+    dispatch(addToOrder({ restaurant, items, basketTotal }))
+  }
 
   useEffect(() => {
     const groupeditems = items.reduce((results, item) => {
@@ -109,7 +114,7 @@ const BasketScreen = () => {
             </Text>
           </View>
 
-          <TouchableOpacity onPress={() => navigation.navigate('PreparingOrderScreen')} className="rounded-lg bg-[#00CCBB] p-4">
+          <TouchableOpacity onPress={() => navigation.navigate('PreparingOrderScreen', addOrder)} className="rounded-lg bg-[#00CCBB] p-4">
             <Text className="text-center text-white text-lg font-bold">Place Order</Text>
           </TouchableOpacity>
         </View>

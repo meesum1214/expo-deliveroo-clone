@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView, TouchableOpacity, Image, ScrollView } from 'react-native'
 import React from 'react'
-import { ArrowLeftIcon, ArrowRightIcon, EllipsisVerticalIcon, HeartIcon, PencilSquareIcon, StarIcon, UserPlusIcon } from 'react-native-heroicons/outline'
+import { ArrowLeftIcon, ArrowRightIcon, ChevronRightIcon, EllipsisVerticalIcon, HeartIcon, PencilSquareIcon, StarIcon, UserPlusIcon } from 'react-native-heroicons/outline'
 import { useNavigation } from '@react-navigation/native';
 
 const ProfileScreen = () => {
@@ -81,6 +81,18 @@ const ProfileScreen = () => {
                             <Text className="text-lg">Invited Friends (0)</Text>
                         </View>
                     </View>
+
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('OrderScreen')}
+                    >
+                        <View className="p-5 border-b border-gray-300 flex-row items-center">
+                            <View className="flex-1 flex-row items-center space-x-3">
+                                <UserPlusIcon color="#00CCBB" size={20} />
+                                <Text className="text-lg">Your Orders</Text>
+                            </View>
+                            <ChevronRightIcon color="#00CCBB" size={20} />
+                        </View>
+                    </TouchableOpacity>
                 </ScrollView>
             </View>
         </SafeAreaView>

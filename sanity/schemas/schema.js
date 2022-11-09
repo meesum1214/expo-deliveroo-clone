@@ -6,7 +6,6 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // We import object and document schemas
 import category from './category'
-import author from './dish'
 import restaurant from './restaurant'
 import dish from './dish'
 import featured from './featured'

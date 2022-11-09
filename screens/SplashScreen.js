@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView } from 'react-native'
+import { View, Text, SafeAreaView, Image } from 'react-native'
 import React, { useEffect } from 'react'
 import * as Animatable from 'react-native-animatable'
 import * as Progress from 'react-native-progress';
@@ -13,7 +13,7 @@ const SplashScreen = () => {
     }, [])
     
     return (
-        <SafeAreaView className="pt-8 flex-1 justify-center items-center bg-primary">
+        <SafeAreaView className=" flex-1 justify-center items-center bg-primary">
             <Animatable.Image
                 source={require('../assets/splashScreen.gif')}
                 animation="slideInUp"

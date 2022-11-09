@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import BasketScreen from './screens/BasketScreen';
 import DeliveryScreen from './screens/DeliveryScreen';
 import HomeScreen from './screens/HomeScreen';
+import OrderScreen from './screens/OrderScreen';
 import PreparingOrderScreen from './screens/PreparingOrderScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import RestaurantScreen from './screens/RestaurantScreen';
@@ -44,6 +45,11 @@ export default function App() {
             name="Delivery"
             component={DeliveryScreen}
             options={{ presentation: 'fullScreenModal', headerShown: false }}
+          />
+          <Stack.Screen
+            name="OrderScreen"
+            component={OrderScreen}
+            options={{ title: 'Your Orders', headerStyle: { backgroundColor: '#00CCBB' }, headerTintColor: 'white' }}
           />
         </Stack.Navigator>
       </Provider>

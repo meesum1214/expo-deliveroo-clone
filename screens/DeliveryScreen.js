@@ -6,10 +6,13 @@ import { selectRestaurant } from '../features/restaurantSlice'
 import { XMarkIcon } from 'react-native-heroicons/outline'
 import * as Progress from 'react-native-progress';
 import MapView, { Marker } from 'react-native-maps';
+import { selectOrderItems } from '../features/orderSlice'
 
 const DeliveryScreen = () => {
     const navigation = useNavigation()
     const restaurant = useSelector(selectRestaurant)
+
+    const order = useSelector(selectOrderItems)
 
     return (
         <View className="bg-[#00CCBB] flex-1 pt-8">
